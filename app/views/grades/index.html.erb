@@ -1,2 +1,3 @@
-<h1>Grades#index</h1>
-<p>Find me in app/views/grades/index.html.erb</p>
+<% @grades.each do |grade| %>
+<p><%= link_to grade.name, grade_path(grade) %></p>
+<% end %>
