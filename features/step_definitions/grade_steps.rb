@@ -1,6 +1,6 @@
-Given /^I have (\d+) grades?$/ do |arg1|
-  (1 ..arg1.to_i).each do
-    Factory(:grade)
+Given /^I have (\d+) (.+)?$/ do |number_of, model|
+  (1 ..number_of.to_i).each do
+    Factory(model.chop)
   end
 end
 
