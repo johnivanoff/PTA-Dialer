@@ -5,8 +5,7 @@ Feature: Manage Grades
 		When I go to the grades page
 		Then I should see 4 grades
 
-@wip
-	Scenario: Delete a teacher
+	Scenario: View a teacher
 		Given the following grade record
 			| name |
 			| First Grade  |
@@ -15,5 +14,6 @@ Feature: Manage Grades
 			| Camille    | Emory     | 1        |
 		When I go to the grades page
 		And follow "First Grade"
+		Then I should see "First Grade"
 		Then I should see "Camille Emory"
 		

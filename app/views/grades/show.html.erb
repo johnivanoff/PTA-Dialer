@@ -4,3 +4,7 @@
   <b>name:</b>
   <%= @grade.name %>
 </p>
+
+<% @grade.teachers.each do |teacher| %>
+<p><%= teacher.whole_name %></p>
+<% end %>
