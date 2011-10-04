@@ -5,7 +5,6 @@ Feature: Manage Teachers
 		When I go to the teachers page
 		Then I should see 4 teachers
 
-@wip
 	Scenario: View a teacher
 		Given the following grade record
 			| name |
