@@ -5,7 +5,6 @@ Feature: Manage Students
 		When I go to the students page
 		Then I should see 4 students
 
-@wip
 	Scenario: View a student
 		Given the following grade record
 			| name |
