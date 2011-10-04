@@ -10,3 +10,9 @@ Factory.define :teacher do |f|
   f.phone_number "972-555-1212"
   f.grade_id 1
 end
+
+Factory.define :student do |f|
+  f.first_name "Sue"
+  f.last_name "Bar"
+  f.teacher_id 1
+end
