@@ -6,7 +6,7 @@ class Teacher < ActiveRecord::Base
     first_name + " " + last_name
   end
 
-  def prper_name 
+  def proper_name 
     last_name + ", " + first_name
   end
   
