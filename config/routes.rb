@@ -1,5 +1,7 @@
 Pta::Application.routes.draw do
   
+  get "students" => "students#index", :as => "students"
+  
   get "teachers" => "teachers#index", :as => "teachers"
   get "teachers/:id" => "teachers#show", :as => "teacher"
 
