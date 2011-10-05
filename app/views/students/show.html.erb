@@ -6,8 +6,12 @@
 </p>
 
 <p>
+  <%= link_to 'Classmates', teacher_students_path(@student.teacher) %>
+</p>
+
+<p>
   <b>Grade:</b>
-  <%= link_to @student.teacher.grade.name, teacher_students_path(@student.teacher) %>
+  <%= link_to @student.teacher.grade.name, grade_path(@student.teacher.grade) %>
 </p>
 
 <p>

@@ -57,7 +57,7 @@ Feature: Manage Students
 		Then I should see "Camille Emory"
 		And I should see "972-555-1212"
 
-	Scenario: View a students clasmates
+	Scenario: View a students classmates
 		Given the following grade record
 			| name |
 			| First Grade  |
@@ -69,7 +69,7 @@ Feature: Manage Students
 			| Jimmy      | Jones     | 1          |
 			| Jenny      | Jones     | 1          |
 		And I go to Jimmy's student page
-		When I follow "First Grade"
+		When I follow "Classmates"
 		Then I should see "First Grade"
 		And I should see "Jimmy Jones"
 		And I should see "Jenny Jones"
