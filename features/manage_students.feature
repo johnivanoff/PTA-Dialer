@@ -8,7 +8,7 @@ Feature: Manage Students
 	Scenario: View a student
 		Given the following grade record
 			| name |
-			| First Grade  |
+			| First Grade |
 		And the following teacher record
 			| first_name | last_name | grade_id |
 			| Camille    | Emory     | 1        |
