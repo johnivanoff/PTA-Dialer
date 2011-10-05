@@ -11,6 +11,7 @@ Pta::Application.routes.draw do
   get "grades/:id" => "grades#show", :as => "grade"
   
   get "parents" => "parents#index", :as => "parents"
+  get "parents/:id" => "parents#show", :as => "parent"
   
   root :to => "welcome#index"
   

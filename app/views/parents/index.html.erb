@@ -1,2 +1,3 @@
-<h1>Parents#index</h1>
-<p>Find me in app/views/parents/index.html.erb</p>
+<% @parents.each do |parent| %>
+<p><%= link_to parent.whole_name, parent_path(parent) %></p>
+<% end %>
