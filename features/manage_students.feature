@@ -20,8 +20,7 @@ Feature: Manage Students
 		Then I should see "Jimmy Jones"
 		And I should see "First Grade"
 		And I should see "Camille Emory"
-	
-@wip	
+
 	Scenario: View a teachers students
 		Given the following grade record
 			| name |
