@@ -1,5 +1,7 @@
 Pta::Application.routes.draw do
   
+  get "welcome/index"
+
   get "students" => "students#index", :as => "students"
   get "students/:id" => "students#show", :as => "student"
   
@@ -10,8 +12,6 @@ Pta::Application.routes.draw do
   get "grades" => "grades#index", :as => "grades"
   get "grades/:id" => "grades#show", :as => "grade"
   
-#  resources :teachers do
-#    resources :students
-#  end
+  root :to => "welcome#index"
   
 end

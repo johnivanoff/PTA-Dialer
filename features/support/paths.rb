@@ -12,7 +12,14 @@ module NavigationHelpers
 
     when /^(.*)'s teacher page$/i
       teacher_path(Teacher.find_by_first_name($1))
-      
+
+    when /^(.*)'s student page$/i
+      student_path(Student.find_by_first_name($1))
+
+    when /^the (.*)'s page$/i
+      grade_path(Grade.find_by_name($1))
+
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

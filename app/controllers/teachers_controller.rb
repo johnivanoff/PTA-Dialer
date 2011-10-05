@@ -3,7 +3,7 @@ class TeachersController < ApplicationController
   # GET /teachers
   # GET /teachers.json
   def index
-    @teachers = Teacher.all
+    @teachers = Teacher.order('last_name')
 
     respond_to do |format|
       format.html # index.html.erb
@@ -25,6 +25,7 @@ class TeachersController < ApplicationController
   # GET /teachers/1/students
   # GET /teachers/1students.json
   def students
+    @teacher = Teacher.find(params[:teacher_id])
     @students = Student.find_all_by_teacher_id(params[:teacher_id])
 
     respond_to do |format|

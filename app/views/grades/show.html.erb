@@ -6,5 +6,5 @@
 </p>
 
 <% @grade.teachers.each do |teacher| %>
-<p><%= teacher.whole_name %></p>
+<p><%= link_to teacher.whole_name, teacher_path(teacher) %></p>
 <% end %>

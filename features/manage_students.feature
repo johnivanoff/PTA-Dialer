@@ -40,4 +40,36 @@ Feature: Manage Students
 		Then I should see "Jimmy Jones"
 		Then I should see "Jenny Jones"
 		Then I should not see "John Smith"
-		
+
+	Scenario: View a students teacher
+		Given the following grade record
+			| name |
+			| First Grade  |
+		And the following teacher record
+			| first_name | last_name | grade_id |
+			| Camille    | Emory     | 1        |
+		And the following student record
+			| first_name | last_name | teacher_id |
+			| Jimmy      | Jones     | 1          |
+			| Jenny      | Jones     | 1          |
+		And I go to Jimmy's student page
+		When I follow "Camille Emory"
+		Then I should see "Camille Emory"
+		And I should see "972-555-1212"
+
+	Scenario: View a students clasmates
+		Given the following grade record
+			| name |
+			| First Grade  |
+		And the following teacher record
+			| first_name | last_name | grade_id |
+			| Camille    | Emory     | 1        |
+		And the following student record
+			| first_name | last_name | teacher_id |
+			| Jimmy      | Jones     | 1          |
+			| Jenny      | Jones     | 1          |
+		And I go to Jimmy's student page
+		When I follow "First Grade"
+		Then I should see "First Grade"
+		And I should see "Jimmy Jones"
+		And I should see "Jenny Jones"

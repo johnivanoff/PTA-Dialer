@@ -7,10 +7,10 @@
 
 <p>
   <b>Grade:</b>
-  <%= @student.teacher.grade.name %>
+  <%= link_to @student.teacher.grade.name, teacher_students_path(@student.teacher) %>
 </p>
 
 <p>
   <b>Teacher:</b>
-  <%= @student.teacher.whole_name %>
+  <%= link_to @student.teacher.whole_name, teacher_path(@student.teacher) %>
 </p>
