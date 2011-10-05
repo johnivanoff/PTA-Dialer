@@ -1,3 +1,5 @@
+<ul>
 <% @parents.each do |parent| %>
-<p><%= link_to parent.whole_name, parent_path(parent) %></p>
+<li><%= link_to parent.whole_name, parent_path(parent) %></li>
 <% end %>
+</ul>

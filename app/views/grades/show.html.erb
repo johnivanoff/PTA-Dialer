@@ -1,10 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>name:</b>
-  <%= @grade.name %>
-</p>
+<h1><%= @grade.name %></h1>
 
+<ul>
 <% @grade.teachers.each do |teacher| %>
-<p><%= link_to teacher.whole_name, teacher_path(teacher) %></p>
+<li><%= link_to teacher.whole_name, teacher_path(teacher) %></li>
 <% end %>
+</ul>

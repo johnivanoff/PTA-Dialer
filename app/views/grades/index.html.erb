@@ -1,3 +1,5 @@
+<ul>
 <% @grades.each do |grade| %>
-<p><%= link_to grade.name, grade_path(grade) %></p>
+<li><%= link_to grade.name, grade_path(grade) %></li>
 <% end %>
+</ul>

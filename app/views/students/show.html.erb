@@ -1,9 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>name:</b>
-  <%= @student.whole_name %>
-</p>
+<h1><%= @student.whole_name %></h1>
 
 <p>
   <%= link_to 'Classmates', teacher_students_path(@student.teacher) %>
@@ -17,4 +14,9 @@
 <p>
   <b>Teacher:</b>
   <%= link_to @student.teacher.whole_name, teacher_path(@student.teacher) %>
+</p>
+
+<p>
+  <b>Parent:</b>
+  <%= link_to @student.parent.whole_name, parent_path(@student.parent) %>
 </p>

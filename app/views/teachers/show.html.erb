@@ -1,18 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @teacher.whole_name %>
-</p>
-<p>
-  <b>Phone:</b>
-  <%= @teacher.phone_number %>
-</p>
-
-<p>
-  <b>Teaches:</b>
-  <%= @teacher.grade.name %>
-</p>
+<h1><%= @teacher.whole_name %></h1>
+<ul>
+	<li><%= @teacher.grade.name %></li>
+	<li><%= @teacher.phone_number %></li>
+	<li><%= @teacher.email %></li>
+</ul>
 
 <% if @teacher.students.size != 0 %>
   <p><%= link_to 'Students', teacher_students_path(@teacher) %></p>
