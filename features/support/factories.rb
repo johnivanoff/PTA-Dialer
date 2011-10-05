@@ -16,3 +16,12 @@ Factory.define :student do |f|
   f.last_name "Bar"
   f.teacher_id 1
 end
+
+Factory.define :parent do |f|
+  f.first_name "Joe"
+  f.last_name "Smith"
+  f.address "123 Any Street"
+  f.city "Richardson"
+  f.state "tx"
+  f.zip "75081"
+end
