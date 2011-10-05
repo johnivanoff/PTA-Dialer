@@ -9,7 +9,10 @@ module NavigationHelpers
     case page_name
 
     when /^the home\s?page$/
-    
+
+    when /^(.*)'s teacher page$/i
+      teacher_path(Teacher.find_by_first_name($1))
+      
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

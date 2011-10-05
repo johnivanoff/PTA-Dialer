@@ -11,5 +11,5 @@
 </p>
 
 <% if @teacher.students.size != 0 %>
-  <p>Students</p>
+  <p><%= link_to 'Students', students_path %></p>
 <% end %>
