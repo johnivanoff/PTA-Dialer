@@ -9,3 +9,7 @@
   <b>Teaches:</b>
   <%= @teacher.grade.name %>
 </p>
+
+<% if @teacher.students.size != 0 %>
+  <p>Students</p>
+<% end %>
