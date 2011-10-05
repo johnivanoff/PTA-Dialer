@@ -22,4 +22,16 @@ class TeachersController < ApplicationController
     end
   end
 
+  # GET /teachers/1/students
+  # GET /teachers/1students.json
+  def students
+    @students = Student.find_all_by_teacher_id(params[:teacher_id])
+
+    respond_to do |format|
+      format.html # students.html.erb
+      format.json { render json: @students }
+    end
+  end
+
+
 end

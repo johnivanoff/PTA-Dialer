@@ -25,15 +25,20 @@ Feature: Manage Students
 	Scenario: View a teachers students
 		Given the following grade record
 			| name |
-			| First Grade |
+			| First Grade  |
+			| Second Grade |
 		And the following teacher record
 			| first_name | last_name | grade_id |
 			| Camille    | Emory     | 1        |
+			| Maesha     | Klien     | 2        |
 		And the following student record
 			| first_name | last_name | teacher_id |
 			| Jimmy      | Jones     | 1          |
 			| Jenny      | Jones     | 1          |
+			| John       | Smith     | 2          |
 		And I am on Camille's teacher page
 		When I follow "Students"
 		Then I should see "Jimmy Jones"
 		Then I should see "Jenny Jones"
+		Then I should not see "John Smith"
+		
