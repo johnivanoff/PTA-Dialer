@@ -9,6 +9,7 @@
 
 Grade.delete_all
 Teacher.delete_all
+Parent.delete_all
 Student.delete_all
 
 Grade.create(:name => 'Principal', :display_order => 9)
@@ -76,8 +77,8 @@ Teacher.create(:first_name => 'Pam', :last_name => 'Batts', :grade => Grade.find
 Teacher.create(:first_name => 'Lynne', :last_name => 'Brown', :grade => Grade.find_by_name('Speech'), :email => 'Lynne.Brown@risd.org', :phone_number => '469-593-8437')
 Teacher.create(:first_name => 'Christine', :last_name => 'Jamison', :grade => Grade.find_by_name('Technology Assistant'), :email => 'Christine.Jamison@risd.org', :phone_number => '469-593-8401')
 
+Parent.create(:first_name => 'Goerge', :last_name => 'Jetson', :address => '123 any street', :city => "Richardson", :state => "TX", :zip => '75081')
 
-
-Student.create(:first_name => 'Elroy', :last_name => 'jetson', :teacher => Teacher.find_by_last_name('Emory'))
-Student.create(:first_name => 'Jane', :last_name => 'jetson', :teacher => Teacher.find_by_last_name('Gilpin'))
-Student.create(:first_name => 'Morty', :last_name => 'Cogswell', :teacher => Teacher.find_by_last_name('Gilpin'))
+Student.create(:first_name => 'Elroy', :last_name => 'Jetson', :teacher => Teacher.find_by_last_name('Emory'), :parent => Parent.find_by_last_name('Jetson'))
+Student.create(:first_name => 'Jane', :last_name => 'Jetson', :teacher => Teacher.find_by_last_name('Gilpin'), :parent => Parent.find_by_last_name('Jetson'))
+Student.create(:first_name => 'Morty', :last_name => 'Cogswell', :teacher => Teacher.find_by_last_name('Gilpin'), :parent => Parent.find_by_last_name('Jetson'))

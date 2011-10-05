@@ -19,6 +19,9 @@ module NavigationHelpers
     when /^the (.*)'s page$/i
       grade_path(Grade.find_by_name($1))
 
+    when /^(.*)'s parent page$/i
+      parent_path(Parent.find_by_first_name($1))
+
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

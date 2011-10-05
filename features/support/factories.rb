@@ -15,6 +15,7 @@ Factory.define :student do |f|
   f.first_name "Sue"
   f.last_name "Bar"
   f.teacher_id 1
+  f.parent_id 1
 end
 
 Factory.define :parent do |f|

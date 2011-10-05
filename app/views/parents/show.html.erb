@@ -4,3 +4,7 @@
   <b>name:</b>
   <%= @parent.whole_name %>
 </p>
+
+<% @parent.students.each do |student| %>
+<p><%= link_to student.whole_name, student_path(student) %></p>
+<% end %>
