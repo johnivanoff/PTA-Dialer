@@ -1,7 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <h1><%= @parent.whole_name %></h1>
-
+<p><%= @parent.address %></p>
+<p><%= @parent.city %> <%= @parent.state %>, <%= @parent.zip %></p>
 <h3>Children</h3r>
 <ul>
 <% @parent.students.each do |student| %>
