@@ -26,3 +26,8 @@ Factory.define :parent do |f|
   f.state "tx"
   f.zip "75081"
 end
+
+Factory.define :parent_student do |f|
+  f.parent_id 1
+  f.student_id 1
+end
