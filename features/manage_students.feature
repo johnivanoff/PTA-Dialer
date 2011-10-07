@@ -99,7 +99,7 @@ Feature: Manage Students
 		And the following student record
 			| first_name | last_name | teacher_id | 
 			| Jimmy      | Jones     | 1          | 
-		And the following parent_student record
+		And the following parents_students record
 			| parent_id | student_id | 
 			| 1         | 1          |
 			| 2         | 1          |

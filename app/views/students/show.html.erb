@@ -18,5 +18,9 @@
 
 <p>
   <b>Parent:</b>
-  <%= link_to @student.parent.whole_name, parent_path(@student.parent) %>
 </p>
+<ul>
+<% @student.parents.each do |parent| %>
+<li><%= link_to parent.whole_name, parent_path(parent) %></li>
+<% end %>
+</ul>

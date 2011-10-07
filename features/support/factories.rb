@@ -14,8 +14,8 @@ end
 Factory.define :student do |f|
   f.first_name "Sue"
   f.last_name "Bar"
-  f.teacher_id 1
-  f.parent_id 1
+#  f.teacher_id 1
+#  f.parent_id 1
 end
 
 Factory.define :parent do |f|
@@ -27,7 +27,7 @@ Factory.define :parent do |f|
   f.zip "75081"
 end
 
-Factory.define :parent_student do |f|
+Factory.define :parents_students do |f|
   f.parent_id 1
   f.student_id 1
 end

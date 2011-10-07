@@ -1,7 +1,7 @@
 class Student < ActiveRecord::Base
   
   belongs_to :teacher
-  belongs_to :parent
+  has_and_belongs_to_many :parents
   
   def whole_name 
     first_name + " " + last_name
