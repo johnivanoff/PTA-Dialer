@@ -16,8 +16,11 @@ Feature: Manage Students
 			| first_name | last_name |
 			| Sammy      | Hagar     |
 		And the following student record
-			| first_name | last_name | teacher_id | parent_id |
-			| Jimmy      | Jones     | 1          | 1         |
+			| first_name | last_name | teacher_id |
+			| Jimmy      | Jones     | 1          |
+		And the following parents_students record
+			| parent_id | student_id | 
+			| 1         | 1          |
 		When I go to the students page
 		And follow "Jimmy Jones"
 		Then I should see "Jimmy Jones"
@@ -84,7 +87,6 @@ Feature: Manage Students
 		And I should see "Jimmy Jones"
 		And I should see "Jenny Jones"
 
-@wip
 	Scenario: View a students parents
 		Given the following grade record
 			| name |

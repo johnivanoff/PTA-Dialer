@@ -24,8 +24,11 @@ Feature: Manage Parents
 			| first_name | last_name |
 			| Sammy      | Hagar     |
 		Given the following student record
-			| first_name | last_name | parent_id | teacher_id |
-			| Jenny      | Hagar     | 1         | 1          |
+			| first_name | last_name | teacher_id |
+			| Jenny      | Hagar     | 1          |
+		And the following parents_students record
+			| parent_id | student_id | 
+			| 1         | 1          |
 		When I go to Sammy's parent page
 		And I follow "Jenny Hagar"
 		Then I should see "Jenny Hagar"
