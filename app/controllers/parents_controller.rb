@@ -22,4 +22,32 @@ class ParentsController < ApplicationController
     end
   end
 
+  # GET /parents/new
+  # GET /parents/new.json
+  def new
+    @parent = Parent.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @parent }
+    end
+  end
+
+  # POST /parents
+  # POST /parents.json
+  def create
+    @parent = Parent.new(params[:parent])
+
+    respond_to do |format|
+      if @parent.save
+        format.html { redirect_to @parent, notice: 'Parent was successfully created.' }
+        format.json { render json: @parent, status: :created, location: @parent }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @parent.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+
 end

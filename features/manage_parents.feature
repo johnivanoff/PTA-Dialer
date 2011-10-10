@@ -32,3 +32,20 @@ Feature: Manage Parents
 		When I go to Sammy's parent page
 		And I follow "Jenny Hagar"
 		Then I should see "Jenny Hagar"
+
+	Scenario: Create a valid Parent
+		Given I am on the new parent page
+		And I fill in "First name" with "John"
+		And I fill in "Last name" with "Ivanoff"
+		And I fill in "Address" with "123 Any Street"
+		And I fill in "City" with "Dallas"
+		And I fill in "State" with "TX"
+		And I fill in "Zip" with "75220"
+		And I press "Create Parent"
+		Then I should see "John"
+		And I should see "Ivanoff"
+		And I should see "123 Any Street"
+		And I should see "Dallas"
+		And I should see "TX"
+		And I should see "75220"
+		And I should see "Parent was successfully created."

@@ -6,8 +6,10 @@ Pta::Application.routes.draw do
   get "grades" => "grades#index", :as => "grades"
   get "grades/:id" => "grades#show", :as => "grade"
   
-  get "parents" => "parents#index", :as => "parents"
-  get "parents/:id" => "parents#show", :as => "parent"
+#  get "parents" => "parents#index", :as => "parents"
+#  get "parents/:id" => "parents#show", :as => "parent"
+#  get "parents/new" => "parents#new", :as => "new_parents"
+  resources :parents
   
   get "teachers" => "teachers#index", :as => "teachers"
   get "teachers/:id" => "teachers#show", :as => "teacher"
