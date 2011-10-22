@@ -1,4 +1,5 @@
 class ParentsController < ApplicationController
+  before_filter :require_login
 
   # GET /parents
   # GET /parents.json

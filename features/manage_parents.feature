@@ -1,5 +1,8 @@
 Feature: Manage Parents
 
+Background:
+ 	Given I am logged in
+
 	Scenario: List Parents
 		Given I have 4 parents
 		When I go to the parents page

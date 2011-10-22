@@ -1,5 +1,8 @@
 Feature: Manage Students
 
+Background:
+ 	Given I am logged in
+
 	Scenario: List Students
 		Given I have 4 students
 		When I go to the students page

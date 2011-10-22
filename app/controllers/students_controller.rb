@@ -1,4 +1,5 @@
 class StudentsController < ApplicationController
+  before_filter :require_login
 
   # GET /students
   # GET /students.json

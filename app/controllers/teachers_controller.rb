@@ -1,4 +1,5 @@
 class TeachersController < ApplicationController
+  before_filter :require_login
 
   # GET /teachers
   # GET /teachers.json

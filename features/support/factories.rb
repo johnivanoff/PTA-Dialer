@@ -1,5 +1,5 @@
 Factory.define :grade do |f|
-  f.name 'john@example.com'
+  f.name 'First Grade'
   f.display_order 1
 end
 
@@ -30,4 +30,10 @@ end
 Factory.define :parents_students do |f|
   f.parent_id 1
   f.student_id 1
+end
+
+Factory.define :user do |f|
+  f.email "example@example.com"
+  f.password "seceret"
+  f.password_confirmation "seceret"
 end

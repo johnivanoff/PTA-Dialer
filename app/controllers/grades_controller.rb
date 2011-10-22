@@ -1,4 +1,5 @@
 class GradesController < ApplicationController
+  before_filter :require_login
 
   # GET /grades
   # GET /grades.json
